@@ -1,0 +1,41 @@
+[measureXInput_0_Dpad_L2]
+Measure=Plugin
+Plugin=XInput
+Device=0
+Channel=JoyL_X
+IfBelowValue=-0.8
+IfBelowAction=[!CommandMeasure Animation "input('left')"]
+Group=Input | Gamepad
+
+[measureXInput_0_Dpad_R2]
+Measure=Plugin
+Plugin=XInput
+Device=0
+Channel=JoyL_X
+IfAboveValue=0.8
+IfAboveAction=[!CommandMeasure Animation "input('right')"]
+Group=Input | Gamepad
+
+[measureXInput_0_Dpad_U2]
+Measure=Plugin
+Plugin=XInput
+Device=0
+Channel=JoyL_Y
+IfAboveValue=0.8
+IfAboveAction=[!CommandMeasure Animation "input('up')"]
+Group=Input | Gamepad
+
+[measureXInput_0_Dpad_D2]
+Measure=Plugin
+Plugin=XInput
+Device=0
+Channel=JoyL_Y
+IfBelowValue=-0.8
+IfBelowAction=[!CommandMeasure Animation "input('down')"]
+Group=Input | Gamepad
+
+//Add this code to input.inc to make use of your analog stick in GameHUB 2.
+//If you want to add the other stick...
+//    add these to input.inc again
+//    change the name in brackets (you can see I just kept the old name but added a "2")
+//    change every instance of "JoyL" to "JoyR". Example: "JoyR_X" or "JoyR_Y"
